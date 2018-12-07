@@ -1,0 +1,5 @@
+/dockerRemoveAll.bat
+test
+/.project
+/.pydevproject
+*.bat

@@ -1,0 +1,30 @@
+{
+	"exitOnError": true,
+	"defaultSettings": {
+		"cell": "DefaultCell01",
+		"node": "DefaultNode01",
+		"server": "server1"
+	},
+	"files": [
+		{
+			"id": 1,
+			"actionOnServer": "SKIP_IF_PRESENT",
+			"localPath": "/artifacts/JSFSample.ear",
+			"remotePath": "external/apps/jsf-sample/artifacts/JSFSample.ear"
+		}
+	],
+	"relaxSecurity": {
+		"id": 100,
+		"trustOutboundAllRealms": true,
+		"trustInboundAllRealms": true,
+		"outboundCsiSSLSupported": true,
+		"inboundCsiSSLSupported": true
+	},
+	"installableApplications": [
+		{
+			"id": 350,
+			"name": "jsf-sample",
+			"absolutePath": "/opt/IBM/WebSphere/AppServer/profiles/AppSrv01/config/external/apps/jsf-sample/artifacts/JSFSample.ear"
+		}
+	]
+}
