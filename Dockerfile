@@ -2,7 +2,7 @@ FROM brainmaxz/was-scripting:0.6.5 as Create
 LABEL maintainer="m.zambrini@informatica.aci.it"
 
 ENV JYTHON_FILE_NAME was_script.py
-COPY install.json /config/install.json
+COPY /config /config
 RUN /work/main
 
 FROM ibmcom/websphere-traditional:8.5.5.13-profile
