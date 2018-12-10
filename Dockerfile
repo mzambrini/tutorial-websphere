@@ -1,5 +1,5 @@
 ARG WAS_IMAGE_NAME=ibmcom/websphere-traditional:8.5.5.13-profile
-ARG ADMIN_PASSWORD=iniziale
+
 
 FROM brainmaxz/was-scripting:0.6.5 as Create
 LABEL maintainer="m.zambrini@informatica.aci.it"
@@ -10,6 +10,8 @@ RUN /work/main
 
 
 FROM ${WAS_IMAGE_NAME}
+
+ARG ADMIN_PASSWORD=iniziale
 
 COPY /scripts /scripts
 COPY /artifacts  /artifacts
