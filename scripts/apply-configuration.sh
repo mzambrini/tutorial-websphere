@@ -11,10 +11,14 @@ scriptFile="/scripts/$1"
 
 test -r "$scriptFile" || { echo "Script file $scriptFile not found. Aborting"; exit 1;}
 echo "Applying script $1"
-
 /opt/IBM/WebSphere/AppServer/profiles/$PROFILE_NAME/bin/wsadmin.sh \
      -lang jython \
      -conntype NONE \
      -f "$scriptFile"
 
+echo "Remove security"
+/opt/IBM/WebSphere/AppServer/profiles/$PROFILE_NAME/bin/wsadmin.sh \
+     -lang jython \
+     -conntype NONE \
+     -f "/scripts/remove-security.jython"
 

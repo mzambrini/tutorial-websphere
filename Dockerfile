@@ -11,8 +11,6 @@ RUN /work/main
 
 FROM ${WAS_IMAGE_NAME}
 
-ARG ADMIN_PASSWORD=iniziale
-
 COPY /scripts /scripts
 COPY /artifacts  /artifacts
 COPY --from=Create /work/result/was_script.py /scripts
@@ -23,7 +21,6 @@ RUN chown -R $USER:$GROUP /scripts && chmod -R a+x /scripts/*.sh
  
 USER $USER
 
-RUN echo $ADMIN_PASSWORD > /tmp/PASSWORD \
-&& /scripts/apply-configuration.sh was_script.py
+RUN /scripts/apply-configuration.sh was_script.py
 
 CMD ["/work/start_server"]
