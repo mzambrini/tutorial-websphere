@@ -18,9 +18,9 @@ docker build -t websphere .
 Per instanziare il container eseguiamo il comando
 
 ```bash
-docker run --name was -p9043:9043 -p9080:9080 -p8880:8880 -d websphere
+docker run --name was -p9060:9060 -p9080:9080 -p8880:8880 -d websphere
 ```
 ## Indirizzi
-La console amministrativa (user: **wsadmin** password: **iniziale**) è disponibile all'indirizzo https://localhost:9043/ibm/console/ .
+La console amministrativa è senza sicurezza (accesso libero) ed è disponibile all'indirizzo http://localhost:9060/ibm/console/ .
 
 L'applicazione risponde all'indirizzo http://localhost:9080/SampleAjax/index.faces .
