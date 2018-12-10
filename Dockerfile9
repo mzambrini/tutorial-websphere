@@ -5,8 +5,7 @@ ENV JYTHON_FILE_NAME was_script.py
 COPY /config /config
 RUN /work/main
 
-
-FROM ibmcom/websphere-traditional:9.0.0.8-profile
+FROM ibmcom/websphere-traditional:9.0.0.9-profile
 
 COPY /scripts /scripts
 COPY /artifacts  /artifacts

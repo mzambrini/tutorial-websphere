@@ -1,4 +1,7 @@
 AdminTask.setGlobalSecurity (['-enabled', 'false'])
+
 print 'Removed security'
+
 AdminConfig.save()
+
 print 'Save'
