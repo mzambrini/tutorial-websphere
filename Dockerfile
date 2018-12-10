@@ -5,7 +5,8 @@ ENV JYTHON_FILE_NAME was_script.py
 COPY /config /config
 RUN /work/main
 
-FROM ibmcom/websphere-traditional:8.5.5.13-profile
+ARG WAS_IMAGE=ibmcom/websphere-traditional:8.5.5.13-profile
+FROM ${WAS_IMAGE}
 
 ARG ADMIN_PASSWORD=iniziale
 
